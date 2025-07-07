@@ -16,8 +16,9 @@
 
     <title>ROBO.SCHOOL</title>
   </head>
+
   <body>
-    <header class="p1">
+    <header class="pt1 pb1">
       <div class="container2">
         <div class="header__wrap d-flex jcsb aic">
           <a href="/" class="logo">ROBO.SCHOOL</a>
@@ -81,7 +82,7 @@
       </section>
       <section class="cards mb5">
         <div class="container">
-          <h2>Выберите нужный пакет</h2>
+          <h2 class="hover_dublemove">Выберите нужный пакет</h2>
           <div class="cards__wrap d-flex g2">
             <div class="card">
               <h3>– PRO –</h3>
@@ -104,6 +105,45 @@
           </div>
         </div>
       </section>
+
+      <section class="test mb5 container">
+        <h2 class="hover_dublemove">Контакты</h2>
+        <p class="info">Информация</p>
+
+        <button class="btn" id="openModalBtn" onclick="openModal()">
+          Open Modal
+        </button>
+      </section>
     </main>
+
+    <footer>My footer</footer>
+    <div class="modal" id="myModal" onclick="closeModal()">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn" onclick="closeModal()">
+          &times;
+        </button>
+        <h2>Modal Popup</h2>
+        <p>This is a simple modal popup example.</p>
+      </div>
+    </div>
+    <script src="assets/js/js.js"></script>
+    <script>
+      const myModal = document.getElementById("myModal");
+      function openModal() {
+        myModal.style.display = "flex";
+      }
+
+      function closeModal() {
+        console.log(event);
+
+        if (
+          event.target === myModal ||
+          event.target === document.getElementById("closeModalBtn")
+        ) {
+          myModal.style.display = "none";
+        }
+        // document.getElementById('myModal').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
