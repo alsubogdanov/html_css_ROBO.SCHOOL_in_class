@@ -289,25 +289,100 @@ h1 {
 
 .modal-content {
   background-color: white;
-  padding: 20px;
+  padding: 4rem;
   border-radius: 5px;
-  text-align: center;
   position: relative;
+  width: 94rem;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: red;
-  color: white;
+  top: 30px;
+  right: 26px;
+  background-color: transparent;
+  color: #141024b2;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  width: 25px;
-  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.close-btn:hover {
+  font-size: 1.4rem;
+}
+.modal__left {
+  flex: 1;
+}
+.modal__right {
+  flex: 3;
+}
+.social_btns img {
+  width: 3rem;
+  height: 3rem;
+}
+.modal__left img {
+  width: 16rem;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.modal__tabs {
+  border-bottom: 1px solid #1410241c;
+  padding-bottom: 2rem;
+  gap: 13rem;
+}
+.tab {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.tab.active {
+  color: var(--accent-color);
+}
+.tab:hover {
+  color: var(--accent-color);
+  transition: all 0.3s;
+}
+.modal__bottom-content {
+  padding: 2rem 0;
+}
+.modal__bottom-content {
+  height: 35rem;
+  overflow-y: auto;
+}
 /* #endregion popup */
+/* #region coaches */
+
+/* #endregion coaches */
+/* #region slider */
+
+/* #endregion slider */
+
+/* #region media */
+
+/* #endregion media */
+/* Стиль полосы прокрутки */
+::-webkit-scrollbar {
+  width: 8px; /* вертикальная полоса */
+  height: 8px; /* горизонтальная полоса */
+}
+
+/* Фон трека */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Сам "ползунок" */
+::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+/* При наведении */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}

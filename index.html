@@ -113,6 +113,17 @@
         <button class="btn" id="openModalBtn" onclick="openModal()">
           Open Modal
         </button>
+        <!-- <div class="slider-container">
+          <button id="prevBtn">←</button>
+          <div class="slider" id="slider">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+          </div>
+          <button id="nextBtn">→</button>
+        </div> -->
       </section>
     </main>
 
@@ -120,30 +131,65 @@
     <div class="modal" id="myModal" onclick="closeModal()">
       <div class="modal-content">
         <button class="close-btn" id="closeModalBtn" onclick="closeModal()">
-          &times;
+          Закрыть
         </button>
-        <h2>Modal Popup</h2>
-        <p>This is a simple modal popup example.</p>
+        <div class="modal__top d-flex g2 mb4">
+          <div class="modal__left">
+            <img src="assets/img/11.jpg" alt="" />
+          </div>
+          <div class="modal__right">
+            <h2>Марина Орлова</h2>
+            <p class="mb1">преподаватель по робототехнике</p>
+            <div class="social_btns d-flex g1">
+              <img src="assets/img/fb2.png" alt="" />
+              <img src="assets/img/insta.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="modal__bottom mb2">
+          <div class="modal__tabs d-flex">
+            <button class="tab active">Образование</button>
+            <button class="tab">Опыт работы</button>
+            <button class="tab">Награды</button>
+          </div>
+          <div class="modal__bottom-content">
+            <p>
+              Сентябрь 1995 — Июнь 2000 Санкт-Петербургский политехнический
+              университет Петра Великого Факультет: Компьютерных наук и
+              технологий Специальность: Математика и компьютерные науки Форма
+              обучения: Очная
+            </p>
+            <h3>Курсы и тренинги</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Reprehenderit ratione animi pariatur facere dolores magni eos
+              tenetur unde quis aperiam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+              sequi quod voluptate quis natus similique corrupti quae ipsa,
+              voluptatem nam facilis enim soluta ipsum impedit laboriosam
+              praesentium repellat maiores totam autem magni sit nisi quisquam?
+              Tempora est rerum aspernatur asperiores.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+              sequi quod voluptate quis natus similique corrupti quae ipsa,
+              voluptatem nam facilis enim soluta ipsum impedit laboriosam
+              praesentium repellat maiores totam autem magni sit nisi quisquam?
+              Tempora est rerum aspernatur asperiores.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+              sequi quod voluptate quis natus similique corrupti quae ipsa,
+              voluptatem nam facilis enim soluta ipsum impedit laboriosam
+              praesentium repellat maiores totam autem magni sit nisi quisquam?
+              Tempora est rerum aspernatur asperiores.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="assets/js/js.js"></script>
-    <script>
-      const myModal = document.getElementById("myModal");
-      function openModal() {
-        myModal.style.display = "flex";
-      }
-
-      function closeModal() {
-        console.log(event);
-
-        if (
-          event.target === myModal ||
-          event.target === document.getElementById("closeModalBtn")
-        ) {
-          myModal.style.display = "none";
-        }
-        // document.getElementById('myModal').style.display = 'none';
-      }
-    </script>
   </body>
 </html>
