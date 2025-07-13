@@ -1,5 +1,6 @@
 const myModal = document.getElementById("myModal");
-function openModal() {
+function openModal(index) {
+  console.log(index);
   myModal.style.display = "flex";
 }
 
@@ -91,3 +92,11 @@ function showTab(index) {
 
 // первый таб по умолчанию
 showTab(0);
+
+//coache open modal
+const coaches = document.getElementById("carousel");
+coaches.addEventListener("click", (e) => {
+  if (e.target && e.target.tagName === "BUTTON") {
+    openModal(e.target.getAttribute("data-ind"));
+  }
+});
