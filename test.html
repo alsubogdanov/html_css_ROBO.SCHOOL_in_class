@@ -85,7 +85,7 @@
     </style>
   </head>
   <body>
-    <div class="carousel-wrapper">
+    <!-- <div class="carousel-wrapper">
       <button id="prevBtn">←</button>
       <div class="carousel" id="carousel">
         <div class="card">1</div>
@@ -98,7 +98,30 @@
     </div>
     <div class="progress-bar">
       <div class="progress-fill"></div>
-    </div>
+    </div> -->
+
+    <form>
+      <label for="name">Имя:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="enter text"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Сообщение:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <input type="checkbox" value="1" checked />
+      <input type="checkbox" value="2" />
+      <input type="checkbox" value="3" />
+
+      <input type="submit" value="send" />
+    </form>
 
     <script src="test.js"></script>
   </body>

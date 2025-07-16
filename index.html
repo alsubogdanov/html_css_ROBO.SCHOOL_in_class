@@ -81,34 +81,11 @@
           </div>
         </div>
       </section>
-      <section class="cards mb5">
+
+      <section class="coaches mb14">
         <div class="container">
-          <h2 class="hover_dublemove">Выберите нужный пакет</h2>
-          <div class="cards__wrap d-flex g2">
-            <div class="card">
-              <h3>– PRO –</h3>
-              <span class="price">20.000 ₽</span>
-              <p>УМК по робототетхнике и программированию</p>
-              <button class="accent">Оставить заявку</button>
-            </div>
-            <div class="card">
-              <h3>– PRO –</h3>
-              <span class="price">20.000 ₽</span>
-              <p>УМК по робототетхнике и программированию</p>
-              <button class="accent">Оставить заявку</button>
-            </div>
-            <div class="card">
-              <h3>– PRO –</h3>
-              <span class="price">20.000 ₽</span>
-              <p>УМК по робототетхнике и программированию</p>
-              <button class="accent">Оставить заявку</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="coaches mb3">
-        <div class="container">
-          <div id="carousel" class="coaches__wrap d-flex g2 mb5">
+          <h2 class="base_title hover_dublemove">Профессиональные тренеры</h2>
+          <div id="carousel" class="coaches__wrap d-flex g2 mb8">
             <div class="coache d-flex f-column g2 aifs">
               <img src="assets/img/11.jpg" class="coache__img" alt="" />
               <h3 class="coache__name">Ирина Лайм</h3>
@@ -140,16 +117,78 @@
               <button class="coache__link" data-ind="4">Подробнее</button>
             </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar"></div>
+
+          <button id="prevBtn">
+            <img src="assets/img/left_btn.png" alt="prevBtn" />
+          </button>
+          <button id="nextBtn">
+            <img src="assets/img/Right_btn.png" alt="nextBtn" />
+          </button>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
           </div>
-          <button id="prevBtn">←</button>
-          <button id="nextBtn">→</button>
+        </div>
+      </section>
+      <section class="cards mb12">
+        <div class="container">
+          <h2 class="base_title hover_dublemove">Выберите нужный пакет</h2>
+          <div class="cards__wrap d-flex g2">
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__wrap d-flex g2">
+            <div class="contact__text d-flex jcc">
+              <div class="contact__text-wrap w80">
+                <h3>Запишитесь на курс  со скидкой 10%</h3>
+                <p>Акция действительна до 10 марта 2022 года</p>
+              </div>
+            </div>
+            <div class="contact__form">
+              <form class="d-flex f-column g1">
+                <input type="text" id="name" placeholder="Имя" required />
+                <input type="tel" id="tel" placeholder="Телефон" required />
+                <input type="email" id="email" placeholder="E-mail" required />
+                <button>Оформить заявку</button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>My footer</footer>
+    <footer>
+      <div class="container2">
+        <div class="footer__wrap d-flex jcsb">
+          <div class="footer__left">
+            <a href="/" class="logo">ROBO.SCHOOL</a>
+            <p>© ROBO.SCHOOL</p>
+          </div>
+          <div class="footer__right">
+            <a href="tel:+7 800 000 11 22" class="tel">+7 800 000 11 22</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div class="modal" id="myModal" onclick="closeModal()">
       <div class="modal-content">
         <button class="close-btn" id="closeModalBtn" onclick="closeModal()">
