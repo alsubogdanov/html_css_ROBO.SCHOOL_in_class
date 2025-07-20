@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="assets/styles/margin_padding.css" />
     <link rel="stylesheet" href="assets/styles/flex_width_height.css" />
+
     <link rel="stylesheet" href="assets/styles/style.css" />
 
     <title>ROBO.SCHOOL</title>
@@ -166,9 +167,47 @@
             <div class="contact__form">
               <form class="d-flex f-column g1">
                 <input type="text" id="name" placeholder="Имя" required />
-                <input type="tel" id="tel" placeholder="Телефон" required />
+                <input type="tel" id="tel" placeholder="Телефон" />
                 <input type="email" id="email" placeholder="E-mail" required />
-                <button>Оформить заявку</button>
+                <label for="topic">Тематика курса</label>
+                <select id="topic" class="custom-select" required>
+                  <!-- <option>Выберите тему</option>
+                  <option>Frontend</option>
+                  <option>Backend</option>
+                  <option>Fullstack</option> -->
+                  <option value="">Выберите тему</option>
+                  <option value="frontend">Frontend</option>
+                  <option value="backend">Backend</option>
+                  <option value="fullstack">Fullstack</option>
+                </select>
+                <fieldset class="d-flex g2">
+                  <legend>Языки, которые интересуют</legend>
+                  <label><input type="checkbox" id="js" checked />JS</label>
+                  <label><input type="checkbox" id="java" />Java</label>
+                  <label><input type="checkbox" id="php" />PHP</label>
+                </fieldset>
+                <fieldset class="d-flex g2">
+                  <legend>Есть опыт программирования?</legend>
+                  <label
+                    ><input
+                      type="radio"
+                      id="exp_true"
+                      name="experiance"
+                      data-val="true"
+                      checked
+                    />Да</label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      id="exp_false"
+                      name="experiance"
+                      data-val="false"
+                    />Нет</label
+                  >
+                </fieldset>
+                <button id="FormBtn">Оформить заявку</button>
+                <p class="form_result"></p>
               </form>
             </div>
           </div>

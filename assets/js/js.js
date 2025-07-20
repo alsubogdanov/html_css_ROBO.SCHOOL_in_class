@@ -176,3 +176,57 @@ prevBtn.addEventListener("click", () => {
     }, 300);
   }
 });
+
+//20.07 Form
+
+const formBtn = document.getElementById("FormBtn");
+
+const userTel = document.getElementById("tel");
+const userEmail = document.getElementById("email");
+const userName = document.getElementById("name");
+const formResult = document.querySelector(".form_result");
+
+formBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const userCheckboxes = document.querySelectorAll(
+    'fieldset input[type="checkbox"]:checked'
+  );
+  const selectedLanguages = Array.from(userCheckboxes).map((item) => item.id);
+
+  const userExperiance = document
+    .querySelector('input[name="experiance"]:checked')
+    .getAttribute("data-val");
+
+  const userTopic = document.querySelector("#topic");
+  const selectedUserTopic = userTopic.value;
+  const userNameVal = userName.value.trim();
+  const userEmailVal = userEmail.value.trim();
+  const userTelVal = userTel.value.trim();
+
+  console.log(userTelVal);
+  if (
+    validation(
+      userNameVal,
+      userTelVal,
+      userEmailVal,
+      selectedUserTopic,
+      selectedLanguages,
+      userExperiance
+    )
+  ) {
+    console.log("data was send");
+  }
+});
+
+function validation(name, tel, email, topic, lng, exp) {
+  if (!name || !tel || !email || !topic || !lng) {
+    formResult.textContent = "Пожалуйста, заполните все обязательные поля";
+    formResult.style.color = "#d5a412";
+    setTimeout(() => {
+      formResult.textContent = "";
+    }, 2000);
+    return;
+  }
+
+  return true;
+}

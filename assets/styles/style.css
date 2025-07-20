@@ -529,6 +529,38 @@ input::placeholder {
   box-shadow: -1px 0px 8px 1px #4b4a4a;
   transition: box-shadow 0.3s;
 }
+
+#tel {
+  display: block;
+  background-image: url(../img/telephone.png);
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  padding-left: 38px;
+}
+
+.custom-select {
+  padding: 20px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 4px;
+
+  color: #333;
+  appearance: none; /* убирает дефолтную стрелку (в Chrome) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  padding-right: 35px; /* место для стрелки */
+}
+fieldset input {
+  margin-right: 5px;
+}
+.form_result {
+  height: 4rem;
+}
 /* #endregion contact */
 footer {
   background-color: var(--main-color);
@@ -540,11 +572,18 @@ footer {
   opacity: 70%;
 }
 
-#tel {
-  display: block;
-  background-image: url(../img/telephone.png);
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: 10px 50%;
-  padding-left: 38px;
+/* #region media */
+@media (max-width: 1760px) {
+  .container2 {
+    max-width: 90vw;
+  }
 }
+@media (max-width: 1343px) {
+  h1 {
+    font-size: 6rem;
+  }
+  .container {
+    width: 90vw;
+  }
+}
+/* #endregion media */
