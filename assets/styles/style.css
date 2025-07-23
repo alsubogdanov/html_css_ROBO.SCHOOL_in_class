@@ -28,6 +28,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.noscroll {
+  overflow: hidden;
+}
 main {
   flex-grow: 1;
 }
@@ -77,6 +80,7 @@ button {
   font-weight: 600;
   margin-bottom: 7rem;
 }
+
 /* #endregion main */
 
 /* #region header */
@@ -96,6 +100,9 @@ header {
   color: var(--light-color);
   font-size: 3rem;
   font-weight: 600;
+}
+.mobile {
+  display: none;
 }
 
 /* #endregion header */
@@ -586,4 +593,215 @@ footer {
     width: 90vw;
   }
 }
+@media (max-width: 1080px) {
+  .mobile {
+    display: flex;
+    gap: 2rem;
+  }
+  .header__wrap nav,
+  .mobile__btn .close_btn,
+  .header__wrap .tel {
+    display: none;
+  }
+  .header__wrap.open .phone_btn,
+  .header__wrap.open .burger_btn {
+    display: none;
+  }
+  .header__wrap.open .mobile__btn .close_btn {
+    display: block;
+    width: 5rem;
+    border: 1px solid #a69b9b;
+    padding: 10px;
+    border-radius: 9px;
+    z-index: 111111111111;
+    position: relative;
+    margin-top: 3rem;
+  }
+
+  .header__wrap.open nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    z-index: 11111;
+  }
+
+  .header__wrap.open .header__menu {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__wrap.open .header__menu li {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .hero__wrap {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .hero__left {
+    margin-top: 6rem;
+    height: 30%;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__right {
+    height: 70%;
+  }
+  .hero__right img {
+    height: 95%;
+  }
+  .hero__right .border {
+    border: 7rem solid var(--light-color);
+    width: 75%;
+  }
+  .about__wrap {
+    flex-wrap: wrap;
+  }
+  .about__item {
+    flex: 1 1 calc(50% - 40px);
+    text-align: center;
+  }
+  .base_title {
+    text-align: center;
+    display: block;
+  }
+  .card {
+    height: 43rem;
+  }
+  .card:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    transform: none;
+  }
+  .price {
+    font-size: 3.5rem;
+  }
+  .card h3 {
+    font-size: 2rem;
+  }
+  .about__desc {
+    width: 100%;
+  }
+}
+@media (max-width: 978px) {
+  .modal-content {
+    width: 72rem;
+  }
+}
+@media (max-width: 932px) {
+  .contact__wrap {
+    flex-direction: column;
+  }
+  .contact__text {
+    margin-bottom: 5rem;
+  }
+  .contact__text-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  .coache__img {
+    height: 40rem;
+  }
+  .cards__wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .hero__wrap {
+    position: relative;
+  }
+  .hero__left .accent {
+    position: absolute;
+    bottom: 6rem;
+    z-index: 1111;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .hero__right {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 800px) {
+  .hero__right .border {
+    width: 90%;
+  }
+}
+@media (max-width: 732px) {
+  .modal-content {
+    width: 95%;
+  }
+  .modal__tabs {
+    display: none;
+  }
+  .tab_mobile {
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .tab_mobile .tab {
+    position: relative;
+    color: white;
+  }
+  .tab_mobile .tab::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/back.png);
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+  }
+  .about__item {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 636px) {
+  .footer__wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    padding-bottom: 5rem;
+  }
+  .footer__left p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    left: 0;
+  }
+}
+@media (max-width: 524px) {
+  .base_title {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .hero {
+    height: 70vh;
+  }
+  .hero__left {
+    height: 40%;
+  }
+  .hero__right {
+    height: 60%;
+  }
+  .hero__right .border {
+    border: 5rem solid var(--light-color);
+    top: 46%;
+  }
+}
+
 /* #endregion media */

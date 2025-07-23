@@ -1,7 +1,9 @@
+const body = document.querySelector("body");
 const myModal = document.getElementById("myModal");
 function openModal(index) {
   console.log(index);
   myModal.style.display = "flex";
+  body.classList.add("noscroll");
 }
 
 function closeModal() {
@@ -12,6 +14,7 @@ function closeModal() {
     event.target === document.getElementById("closeModalBtn")
   ) {
     myModal.style.display = "none";
+    body.classList.remove("noscroll");
   }
   // document.getElementById('myModal').style.display = 'none';
 }
@@ -230,3 +233,16 @@ function validation(name, tel, email, topic, lng, exp) {
 
   return true;
 }
+///
+//mobile
+const headerWrap = document.querySelector(".header__wrap");
+const closeBurgerBtn = document.querySelector(".close_btn");
+const burgerBtn = document.querySelector(".burger_btn");
+burgerBtn.addEventListener("click", () => {
+  headerWrap.classList.add("open");
+  body.classList.add("noscroll");
+});
+closeBurgerBtn.addEventListener("click", () => {
+  headerWrap.classList.remove("open");
+  body.classList.remove("noscroll");
+});
