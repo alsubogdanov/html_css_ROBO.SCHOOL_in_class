@@ -246,3 +246,35 @@ closeBurgerBtn.addEventListener("click", () => {
   headerWrap.classList.remove("open");
   body.classList.remove("noscroll");
 });
+
+//mobile tabs
+//with buttons
+const tabTrigger = document.getElementById("tabTrigger");
+const tabDropdown = document.querySelector(".tab__dropdown");
+tabTrigger.addEventListener("click", () => {
+  tabDropdown.classList.toggle("hidden");
+});
+tabDropdown.addEventListener("click", (e) => {
+  if (e.target && e.target.classList.contains("tab__option")) {
+    const index = e.target.getAttribute("data-ind");
+    showTab(index);
+    tabTrigger.querySelector("button").textContent = e.target.textContent;
+    tabDropdown.classList.add("hidden");
+  }
+});
+
+//with select
+// const tabsSelect = document.getElementById("tabsSelect");
+// tabsSelect.addEventListener("change", (e) => {
+//   const index = e.target.value;
+//   showTab(index);
+// });
+
+//faq
+const faq = document.getElementById("faq");
+faq.addEventListener("click", (e) => {
+  if (e.target && e.target.classList.contains("faq__question")) {
+    e.target.parentElement;
+    e.target.parentElement.classList.toggle("active");
+  }
+});

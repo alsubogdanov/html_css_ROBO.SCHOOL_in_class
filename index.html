@@ -175,6 +175,61 @@
           </div>
         </div>
       </section>
+      <section class="photo-gal mb12">
+        <div class="container">
+          <div class="photo-gal__wrap d-flex jcc g2">
+            <div class="photo__item">
+              <img src="assets/img/1.jpg" alt="gal">
+              <div class="overlay">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque?</span>
+              </div>
+            </div>
+            <div class="photo__item">
+              <img src="assets/img/2.jpg" alt="gal">
+              <div class="overlay">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque?</span>
+              </div>
+            </div>
+            <div class="photo__item">
+              <img src="assets/img/3.jpg" alt="gal">
+              <div class="overlay">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque?</span>
+              </div>
+            </div>
+            <div class="photo__item">
+              <img src="assets/img/11.jpg" alt="gal">
+              <div class="overlay">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="faq" class="faq mb12">
+        <div class="container">
+          <div class="faq__wrap">
+            <div class="faq__item">
+              <div class="faq__question">Question#1</div>
+              <div class="faq__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ut nam esse facere modi ducimus sed id sunt vel praesentium.</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question">Question#2</div>
+              <div class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro excepturi iure illo dolore explicabo quo numquam fugiat id? Illum nobis perspiciatis tempore. Aperiam vero cumque nam ipsum tempore iure dignissimos.</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question">Question#3</div>
+              <div class="faq__answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, saepe?</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question">Question#4</div>
+              <div class="faq__answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis tenetur unde sit dolores soluta totam perspiciatis officia nesciunt repudiandae nihil, autem illo nam?</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="contact">
         <div class="container">
           <div class="contact__wrap d-flex g2">
@@ -273,11 +328,22 @@
             <button class="tab" data-ind="2">Награды</button>
           </div>
           <div class="tabs_mobile">
-            <div class="tab_mobile d-flex g1">
-              <button class="tab" data-ind="0">Образование</button>
+            <div id="tabTrigger" class="tab_mobile d-flex g1">
+              <button class="tab">
+                Образование
+              </button>
             </div>
-          </div>
-          <div class="modal__bottom-content"></div>
+            <div class="tab__dropdown hidden">
+              <button class="tab__option" data-ind="0">Образование</button>
+              <button class="tab__option" data-ind="1">Опыт работы</button>
+              <button class="tab__option" data-ind="2">Награды</button>
+            </div>
+            <!-- <select id="tabsSelect">
+              <option value="0">Образование</option>
+              <option value="1">Опыт работы</option>
+              <option value="2">Награды</option>
+            </select> -->
+            <div class="modal__bottom-content"></div>
         </div>
       </div>
     </div>
